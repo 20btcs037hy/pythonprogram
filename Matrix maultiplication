@@ -1,0 +1,45 @@
+# matrix in python
+
+print("Enter 1st order matrix : ")
+m,n = list(map(int,input().split()))
+
+print("Enter row wise values ")
+mat1=[]
+
+for i in range(m):
+    print("enter row ",i,"Value: ")
+    row=list(map(int,input().split()))
+    mat1.append(row)
+
+print("Enter 2nd order of Matrix : ")
+p,q = list(map(int,input().split()))
+
+print("Enter row wise values ")
+mat2=[]
+
+for j in range(p):
+    print("Enter row ",j,"values")
+    row=list(map(input().split()))
+    mat2.append(row)
+
+print("Matrix 1: ",mat1)
+print("Matrix 2: ",mat2)
+
+resultmat = []
+
+for i in range (m):
+    row=[]
+    for j in range (q):
+        row.append(0)
+
+    resultmat.append(row)
+print("Matrix Mutltiplication")
+
+for i in range (m):
+    for j in range (q):
+        for k in range (n):
+
+            resultmat[i][j] += mat1[i][k] * mat2[k][j]
+
+for row in resultmat:
+    print(row)
