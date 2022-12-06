@@ -1,0 +1,15 @@
+# Bubble Sort
+def bubble_sort(list1):
+    for i in range (0,len(list1)-1):
+        for j in range(0,len(list1)-1):
+
+            if( list1 [j] > list1 [j+1]):
+                temp = list1[j]
+                list1[j] = list1[j+1]
+                list1[j+1] = temp
+    return list1
+list1 = [2,5,3,6,8,3,2,9]
+
+print("\n Un_Sorted List : ", list1)
+#list1 = input('Enter elements of a list : ')
+print("\n Sorted List : ",bubble_sort(list1))
